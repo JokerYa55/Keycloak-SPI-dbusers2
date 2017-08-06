@@ -1,4 +1,4 @@
-package org.keycloak.examples.storage.user;
+package keycloak.storage.user;
 
 import java.util.Iterator;
 import org.jboss.logging.Logger;

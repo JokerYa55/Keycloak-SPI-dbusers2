@@ -19,13 +19,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     
 
-    <groupId>user-storage-jpa-example</groupId>
+    <groupId>user-storage-jpa-dbusers-2</groupId>
     <version>1</version>
-    <name>SPI JPA Provider</name>
+    <name>SPI JPA Provider DBUsers2</name>
     <description/>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>user-storage-jpa-example</artifactId>
+    <artifactId>user-storage-jpa-dbusers-2</artifactId>
     <packaging>jar</packaging>
 
     <properties>
@@ -34,6 +33,7 @@
         <version.keycloak>3.1.0.Final</version.keycloak>
         <version.jboss-logging>3.3.1.Final</version.jboss-logging>
         <version.hibernate-jpa-api>1.0.0.Draft-16</version.hibernate-jpa-api>
+        <module.appname>user-storage-jpa-dbuser-2</module.appname>        
     </properties>
 
     <dependencies>
@@ -93,7 +93,7 @@
     </dependencies>
 
     <build>
-        <finalName>user-storage-jpa-example</finalName>
+        <finalName>${module.appname}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

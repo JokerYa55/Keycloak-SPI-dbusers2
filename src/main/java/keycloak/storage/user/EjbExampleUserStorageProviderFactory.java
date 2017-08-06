@@ -1,4 +1,4 @@
-package org.keycloak.examples.storage.user;
+package keycloak.storage.user;
 
 import org.jboss.logging.Logger;
 import org.keycloak.component.ComponentModel;
@@ -20,7 +20,7 @@ public class EjbExampleUserStorageProviderFactory implements UserStorageProvider
             log.debug("----------------------------------------------------------------------");
             log.debug("create");
             InitialContext ctx = new InitialContext();
-            EjbExampleUserStorageProvider provider = (EjbExampleUserStorageProvider)ctx.lookup("java:global/user-storage-jpa-example/" + EjbExampleUserStorageProvider.class.getSimpleName());
+            EjbExampleUserStorageProvider provider = (EjbExampleUserStorageProvider)ctx.lookup("java:global/user-storage-jpa-dbuser-2/" + EjbExampleUserStorageProvider.class.getSimpleName());
             log.debug("provider = " + provider + "  -> " + EjbExampleUserStorageProvider.class.getSimpleName());
             provider.setModel(model);
             provider.setSession(session);
@@ -31,9 +31,10 @@ public class EjbExampleUserStorageProviderFactory implements UserStorageProvider
         }
     }
 
+    // Имя которое будет отобрахаться в интерфейсе Keycloak
     @Override
     public String getId() {
-        return "example-user-storage-jpa2";
+        return "user-storage-dbuser2";
     }
 
     @Override

@@ -1,4 +1,4 @@
-package org.keycloak.examples.storage.user;
+package keycloak.storage.user;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

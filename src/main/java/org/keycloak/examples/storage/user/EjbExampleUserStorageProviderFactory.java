@@ -33,7 +33,7 @@ public class EjbExampleUserStorageProviderFactory implements UserStorageProvider
 
     @Override
     public String getId() {
-        return "example-user-storage-jpa";
+        return "example-user-storage-jpa2";
     }
 
     @Override

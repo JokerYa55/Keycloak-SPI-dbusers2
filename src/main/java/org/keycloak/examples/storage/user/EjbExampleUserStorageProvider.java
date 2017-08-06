@@ -19,7 +19,6 @@ import org.keycloak.storage.UserStorageProvider;
 import org.keycloak.storage.user.UserLookupProvider;
 import org.keycloak.storage.user.UserQueryProvider;
 import org.keycloak.storage.user.UserRegistrationProvider;
-import org.keycloak.examples.storage.HTTPUtil.Util;
 
 import javax.ejb.Local;
 import javax.ejb.Remove;
@@ -34,7 +33,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
-import org.json.simple.JSONObject;
 import org.keycloak.common.util.MultivaluedHashMap;
 import static org.keycloak.examples.storage.HTTPUtil.Util.doGet;
 import org.keycloak.models.ClientModel;
@@ -178,8 +176,8 @@ public class EjbExampleUserStorageProvider implements UserStorageProvider,
         log.info("added user: " + username);
 
         try {
-            JSONObject httpGet = doGet("http://192.168.1.150:8080/testRest/admusers/hello/1500", null);
-            log.info(httpGet.toJSONString());
+            String httpGet = doGet("http://192.168.1.150:8080/testRest/admusers/hello/1500", null);
+            log.info(httpGet);
         } catch (Exception e) {
             log.error(e.getMessage());
         }
